@@ -29,8 +29,27 @@ img{
 }
 
 
+// ======== Layout =======
+.l-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: $z-fixed;
+    background-color: $color-white;
+    box-shadow: 0 1px 4px $color-light-green;
+}
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: $mb-2;
+    margin-right: $mb-2;
+}
 
-// ==== Class css ====
+// ======== Class css ========
 .section{
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -53,4 +72,79 @@ img{
     margin: auto;
     top: 2rem;
     background-color: $color-blue;
+}
+
+.nav{
+    height: $header-hight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: $font-semi;
+    &__item {
+        margin-bottom: $mb-4;
+    }
+    &__logo{
+        color: $color-black;
+    }
+    &__toggle{
+        color: $color-blue;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+
+
+// ==== Media query: mobile first ====
+@media screen and (min-width: 768px){
+    $font-big-size: 3.5rem;
+    $font-h2-size: 2rem;
+    $font-normal-size: 1rem;
+}
+
+@media screen and (max-width:768px){
+    .nav__menu {
+        position: fixed;
+        top: $header-hight;
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        background-color: $color-black;
+        transition: .8s;
+    }
+}
+
+.nav__link {
+    position: relative;
+    color: $color-white;
+    &:hover{
+        position: relative;
+    }
+}
+// help create a line at bottom of every link when user hover
+.nav__link:hover::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: $color-blue;
+}
+
+// ==== Active menu ====
+.active::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: $color-blue;
+}
+
+// khong de cai .show o day thi no se k show ra duoc cai table toggle
+.show {
+    right: 0;
 }

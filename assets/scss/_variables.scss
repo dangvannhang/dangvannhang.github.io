@@ -12,7 +12,8 @@ $font-semi: 600;
 // ==== Colors ====
 $color-blue:  #4070f4;
 $color-black:  #0e2431;
-
+$color-white: #ffffff;
+$color-light-green: rgba(146, 161,176, .15);
 
 
 // ==== Fonts ==== 
@@ -20,16 +21,6 @@ $font-body: 'Poppins', sans-serif;
 $font-big-size: 2rem;
 $font-h2-size: 1.25rem;
 $font-normal-size: 0.938rem;
-
-
-
-// ==== Media query: mobile first ====
-@media screen and (min-width: 768px){
-    $font-big-size: 3.5rem;
-    $font-h2-size: 2rem;
-    $font-normal-size: 1rem;
-}
-
 
 
 // ==== ====
