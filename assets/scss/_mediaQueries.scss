@@ -1,0 +1,89 @@
+
+// ==== Media queries ==== //
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+    .section{
+        padding: 4rem 0 3rem 0;
+        &__title{
+            margin-bottom: $mb-6;
+            &::after{
+                width: 80px;   
+                top: 3rem; 
+            }
+        }
+    }
+    .nav{
+        height: 4rem;
+        &__list{
+            display: flex;
+            padding-top: 0;
+        }
+        &__item{
+            margin-left: $mb-6;
+            margin-bottom: 0;
+        }
+        &__link{
+            color: $color-black;
+        }
+        &__toggle{
+            display: none;
+        }
+    }
+
+    .home{
+        height: 100vh;
+        &__data{
+            align-self: flex-end;
+
+        }
+        &__social{
+            padding-top: 0;
+            padding-bottom: 2.5rem;
+            flex-direction: row;
+            align-self: flex-end;
+            &-icon{
+                margin-bottom: 0;
+                margin-right: $mb-4;
+            }
+        }
+        &__img{
+            width: 457px;
+            bottom: 30%;
+
+        }
+    }
+    .about__container, .skills__container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        text-align: initial;
+    }
+    .about__img img{
+        width: 300px;
+    }
+
+    .work__container{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        column-gap: 2rem;
+        
+    }
+
+    .contact__form {
+        width: 360px;
+    }
+    .contact__container {
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home__img{
+        top: 10rem;
+    }
+}

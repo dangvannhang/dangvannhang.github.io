@@ -34,7 +34,7 @@ img{
     width: 100%;
     position: fixed;
     top: 0;
-    bottom: 0;
+    left: 0;
     z-index: $z-fixed;
     background-color: $color-white;
     box-shadow: 0 1px 4px $color-light-green;
@@ -47,6 +47,7 @@ img{
     width: calc(100% - 2rem);
     margin-left: $mb-2;
     margin-right: $mb-2;
+    position: relative;
 }
 
 // ======== Class css ========
@@ -93,6 +94,17 @@ img{
     }
 }
 
+.button{
+    display: inline-block;
+    background-color: $color-blue;
+    color: $color-white;
+    padding: .75rem 2.5rem;
+    font-weight: $font-semi;
+    border-radius: .5rem;
+    &:hover{
+        box-shadow: 0 10px 36px $color-dark-black;
+    }
+}
 
 
 // ==== Media query: mobile first ====
@@ -137,7 +149,7 @@ img{
 .active::after {
     position: absolute;
     content: "";
-    width: 100px;
+    width: 50px;
     height: 0.18rem;
     left: 0;
     top: 2rem;
@@ -148,3 +160,4 @@ img{
 .show {
     right: 0;
 }
+
